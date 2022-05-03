@@ -23,15 +23,18 @@ namespace BankAPI
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+
                     //STARTING ORACLE
                     //OracleDB oracleDB = new OracleDB();
 
                     //STARTING SERVICE
                     new Task(async () =>
                     {
+                        var a = IntegrationService.BuildToken();
+
                         while (true)
                         {
-                            Console.WriteLine("Starting Service Conneck Bank");
+                            Console.WriteLine("Starting Service Connect Bank");
                             await IntegrationService.Startntegration();
                             Thread.Sleep(3600000);//1 Hora
                         }
