@@ -39,7 +39,7 @@ namespace Domain.Services
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Aud, GetTokenBradesco),
-                new Claim(JwtRegisteredClaimNames.Sub, "038052160/0057-01"),
+                new Claim(JwtRegisteredClaimNames.Sub, "e55e6ce8-c55d-4bb0-b546-c19ec90a3f11"),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.Now.Second.ToString()),
                 new Claim(JwtRegisteredClaimNames.Exp, DateTime.Now.AddMonths(1).Second.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
